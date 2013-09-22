@@ -663,7 +663,7 @@
  ^,/,<cm>$
  ^pot/poder<vbmod><pri><p3><sg>$
  ^ser/ser<vbser><inf>$
- ^que/que<cnjsub>/que<rel><an><mf><sp>$
+ ^que/que<rel><an><mf><sp>$
  ^es/es<prn><pro><ref><p3><mf><sp>$
  ^retardi/retardar<vblex><prs><p3><sg>$
  ^lleugerament/lleugerament<adv>$
@@ -3563,7 +3563,7 @@
  ^persones/persona<n><f><pl>$
  ^del/de<pr>+el<det><def><m><sg>$
  
- ^Baix/Baix<adv>/Baix<adj><m><sg>$
+ ^Baix/Baix<adj><m><sg>$
  ^Vallès/*Vallès$
  ^i/i<cnjcoo>$
  ^suposarà/suposar<vblex><fti><p3><sg>$
@@ -6295,7 +6295,7 @@
  ^i/i<cnjcoo>$
  ^que/que<rel><an><mf><sp>$
  ^s'/es<prn><pro><ref><p3><mf><sp>$
- ^hauria d'/haver de<vbmod><cni><p1><sg>/haver de<vbmod><cni><p3><sg>$
+ ^hauria d'/haver de<vbmod><cni><p3><sg>$
    ^inaugurar/inaugurar<vblex><inf>$
   ^al setembre/al setembre<adv>$
  ^./.<sent>$
@@ -12784,7 +12784,7 @@
  ^setmanes/setmana<n><f><pl>$
  ^i/i<cnjcoo>$
  ^mitja/mig<adj><f><sg>$
- ^després/després<adv>/desprendre<vblex><pp><m><sg>$
+ ^després/després<adv>$
   ^del/de<pr>+el<det><def><m><sg>$
  ^desallotjament/desallotjament<n><m><sg>$
  ^de/de<pr>$
@@ -13750,7 +13750,7 @@
  ^d'/de<pr>$
  ^espera/espera<n><f><sg>$
  ^,/,<cm>$
- ^en/en<pr>/en<prn><pro><adv>$
+ ^en/en<pr>$
   ^lloc/lloc<n><m><sg>$
   ^de/de<pr>$
  ^donar/donar<vblex><inf>$
@@ -17305,7 +17305,7 @@
  ^quedar/quedar<vblex><inf>$
  ^curt/curt<adj><m><sg>$
  ^i/i<cnjcoo>$
-^en/en<pr>/en<prn><pro><adv>$
+^en/en<pr>$
   ^lloc/lloc<n><m><sg>$
   ^d'/de<pr>$
  ^una/un<det><ind><f><sg>$
@@ -18419,7 +18419,7 @@
  ^no/no<adv>$
  ^estiguem/estar<vblex><prs><p1><pl>$
  ^preocupats/preocupar<vblex><pp><m><pl>$
- ^després/després<adv>/desprendre<vblex><pp><m><sg>$
+ ^després/després<adv>$
   ^del/de<pr>+el<det><def><m><sg>$
  ^que/que<rel><an><mf><sp>$
  ^ha/haver<vbhaver><pri><p3><sg>$
@@ -19339,7 +19339,7 @@
  ^Reina/Rei<n><f><sg>$
  ^Maria/Maria<np><ant>$
  ^Cristina/Cristina<np><ant>$
- ^fera malbé/fer<vblex><pis><p3><sg># malbé/fer<vblex><pis><p1><sg># malbé$
+ ^fera malbé/fer<vblex><pis><p3><sg># malbé$
  ^la seva/el_seu<det><pos><f><sg>$
  ^oficina/oficina<n><f><sg>$
  ^:/:<sent>$
@@ -20759,7 +20759,7 @@
  ^./.<sent>$
  
 ^Proposo/Proposar<vblex><pri><p1><sg>$
- ^en/en<pr>/en<prn><pro><adv>$
+ ^en/en<pr>$
   ^nom/nom<n><m><sg>$
   ^de/de<pr>$
  ^Perla/Perla<n><f><sg>$
@@ -25028,7 +25028,7 @@
  ^de/de<pr>$
  ^les/el<det><def><f><pl>$
  ^coses/cosa<n><f><pl>$
- ^que/que<cnjsub>/que<rel><an><mf><sp>$
+ ^que/que<rel><an><mf><sp>$
  ^fem/fer<vblex><pri><p1><pl>$
 ^,/,<cm>$
  ^el/el<det><def><m><sg>$
