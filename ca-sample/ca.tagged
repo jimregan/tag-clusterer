@@ -661,7 +661,7 @@
  ^,/,<cm>$
  ^però/però<cnjcoo>$
  ^,/,<cm>$
- ^pot/pot<n><m><sg>/poder<vbmod><pri><p3><sg>$
+ ^pot/poder<vbmod><pri><p3><sg>$
  ^ser/ser<vbser><inf>$
  ^que/que<cnjsub>/que<rel><an><mf><sp>$
  ^es/es<prn><pro><ref><p3><mf><sp>$
@@ -17396,7 +17396,7 @@
  ^avui/avui<adv>$
  ^la/el<det><def><f><sg>$
  ^companyia/companyia<n><f><sg>$
- ^Amaranto/$
+ ^*Amaranto$
  ^a/a<pr>$
  ^l'/el<det><def><mf><sg>$
  ^Antic/Antic<adj><m><sg>$
@@ -22212,7 +22212,8 @@ _^contra/contra<n><f><sg>$
  ^./.<sent>$
  
 ^La/El<det><def><f><sg>$
- ^qüestió/qüestió<n><f><sg>$ ^era/ser<vbser><pii><p3><sg>$
+ ^qüestió/qüestió<n><f><sg>$ 
+^era/ser<vbser><pii><p3><sg>$
  ^molt més/molt més<adv>$
  ^medieval/medieval<adj><mf><sg>$
  ^./.<sent>$
@@ -24934,7 +24935,8 @@ _^contra/contra<n><f><sg>$
  ^van/anar<vblex><pri><p3><pl>$
  ^adreçats/adreçar<vblex><pp><m><pl>$
  ^a/a<pr>$
- ^tothom/tothom<prn><tn><m><sg>$^./.<sent>$
+ ^tothom/tothom<prn><tn><m><sg>$
+^./.<sent>$
 
 ^Em/Em<prn><pro><p1><mf><sg>$
  ^fa mal/fer<vblex><pri><p3><sg># mal$
@@ -25196,9 +25198,9 @@ _^contra/contra<n><f><sg>$
 ^estat/ser<vbser><pp><m><sg>$
 ^mai/mai<adv>$
 ^marxista/marxista<adj><mf><sg>$
-^./.<sent>$[
+^./.<sent>$
 
-]^Jo/Jo<prn><tn><p1><mf><sg>$
+^Jo/Jo<prn><tn><p1><mf><sg>$
 ^t'/et<prn><pro><p2><mf><sg>$
 ^explico/explicar<vblex><pri><p1><sg>$
 ^qui/qui<prn><itg><mf><sp>$
