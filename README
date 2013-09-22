@@ -1,4 +1,4 @@
-tag-clustererer. It clusters tags.
+tag-clusterer. It clusters tags.
 
 Actually, it doesn't. It's just a pair of filters to delexicalise tagged
 text, which is then clustered by a word clustering tool (currently, mkcls
