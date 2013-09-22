@@ -47,6 +47,7 @@ for my $k (keys %single) {
 	my $lemma = 0;
 	my $tagsout = "";
 	my $clsname = "CLASS$k";
+	my $lemtmp = "";
 
 	# in simple cases, we can name it a little better
 	if ($#{$single{$k}} == 0) {
@@ -58,7 +59,9 @@ for my $k (keys %single) {
 	for my $v (@{$single{$k}}) {
 		$tagsout .= "      <tags-item ";
 		if ($v =~ /^([^<]*)</ && $1 ne '') {
-			$tagsout .= "lemma=\"$1\" ";
+			$lemtmp = $1;
+			$lemtmp =~ s/_/ /g;
+			$tagsout .= "lemma=\"$lemtmp\" ";
 			$v =~ s/^([^<]*)</</;
 			$lemma = 1;
 		}
@@ -96,7 +99,7 @@ for my $m (keys %mult) {
 				if ($s =~ /^([^<]*)</ && $1 ne '') {
 					$lemtmp = $1;
 					$lemtmp =~ s/_/ /g;
-					$tagsout .= "lemma=\"$1\" ";
+					$tagsout .= "lemma=\"$lemtmp\" ";
 					$s =~ s/^([^<]*)</</;
 					$lemma = 1;
 				}
