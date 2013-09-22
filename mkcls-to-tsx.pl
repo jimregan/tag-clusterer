@@ -30,6 +30,7 @@ my %closed = ();
 while (<>) {
 	chomp;
 	my ($tag, $class) = split/\t/;
+	next if ($tag eq 'UNK');
 	if ($tag =~ /\+/) {
 		push @{$mult{$class}}, $tag;
 	} else {
