@@ -18,6 +18,7 @@ if($ARGV[1]) {
 	$input = *STDIN;
 }
 binmode $input, ":utf8";
+binmode STDOUT, ":utf8";
 
 my @tags;
 
@@ -42,7 +43,7 @@ while (<$input>) {
 	s/\\\///;
 
 	# Unknown words
-	if (/\^\*/) {
+	if (/\^\*/ || /^\*/) {
 		print "UNK\n";
 		next;
 	}
