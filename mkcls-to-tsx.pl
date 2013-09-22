@@ -25,6 +25,7 @@ sub classname {
 }
 
 my %simple = ();
+my %closed = ();
 
 while (<>) {
 	chomp;
@@ -66,6 +67,7 @@ for my $k (keys %single) {
 	print "    <def-label name=\"$clsname\"";
 	if ($lemma == 1) {
 		print " closed=\"true\"";
+		$closed{$clsname} = 1;
 	}
 	print ">\n";
 	print $tagsout;
@@ -80,9 +82,12 @@ for my $m (keys %mult) {
 
 	for my $v (@{$mult{$m}}) {
 		$tagsout .= "      <sequence>\n";
-		for my $s (split(/\+/, $v)) { 
+		for my $s (split(/\+/, $v)) {
 			if (exists $simple{$s}) {
 				$tagsout .= "        <label-item label=\"$simple{$s}\"/>\n";
+				if ($closed{$simple{$s}} && $closed{$simple{$s}} == 1) {
+					$lemma = 1;
+				}
 			} else {
 				$tagsout .= "        <tags-item ";
 				if ($s =~ /^([^<]*)</ && $1 ne '') {
