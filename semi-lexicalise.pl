@@ -43,6 +43,8 @@ while (<$input>) {
 	s/\\\///;
 
 	# Unknown words
+	# FIXME: On second thought, this seems wrong, as it will have an
+	# effect on the word classes. It might be better to keep them as is.
 	if (/\^\*/ || /^\*/) {
 		print "UNK\n";
 		next;
