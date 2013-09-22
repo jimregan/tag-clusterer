@@ -81,6 +81,7 @@ for my $m (keys %mult) {
 	my $tagsout = "";
 	# Stuck with sucky names for def-mults for now.
 	my $clsname = "MULT$m";
+	my $lemtmp = "";
 
 	for my $v (@{$mult{$m}}) {
 		$tagsout .= "      <sequence>\n";
@@ -93,6 +94,8 @@ for my $m (keys %mult) {
 			} else {
 				$tagsout .= "        <tags-item ";
 				if ($s =~ /^([^<]*)</ && $1 ne '') {
+					$lemtmp = $1;
+					$lemtmp =~ s/_/ /g;
 					$tagsout .= "lemma=\"$1\" ";
 					$s =~ s/^([^<]*)</</;
 					$lemma = 1;
