@@ -31,6 +31,7 @@ while (<>) {
 	chomp;
 	my ($tag, $class) = split/\t/;
 	next if ($tag eq 'UNK');
+	next if ($tag =~ /^\*/);
 	if ($tag =~ /\+/) {
 		push @{$mult{$class}}, $tag;
 	} else {
