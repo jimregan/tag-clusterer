@@ -20,6 +20,9 @@ if($ARGV[1]) {
 binmode $input, ":utf8";
 binmode STDOUT, ":utf8";
 
+# Set this to 1 to normalise unknowns
+my $normalise_unk = 0;
+
 my @tags;
 
 while (<$input>) {
@@ -43,10 +46,13 @@ while (<$input>) {
 	s/\\\///;
 
 	# Unknown words
-	# FIXME: On second thought, this seems wrong, as it will have an
-	# effect on the word classes. It might be better to keep them as is.
-	if (/\^\*/ || /^\*/) {
-		print "UNK\n";
+	if (/\*/) {
+		s/^[^\/]*\///;
+		if ($normalise_unk) {
+			print "UNK\n";
+		} else {
+			print "$_\n";
+		}
 		next;
 	}
 	my $re = '(' . join("|", @tags) . ')';
