@@ -1,0 +1,13 @@
+tag-clustererer. It clusters tags.
+
+Actually, it doesn't. It's just a pair of filters to delexicalise tagged
+text, which is then clustered by a word clustering tool (currently, mkcls
+only), and then generates a tagset specification (.tsx) file for use with
+apertium-tagger.
+
+The input must be tagged -- not analysed -- text in the format used for
+supervised training of the tagger. Feed its output to mkcls (play around with
+the number of classes it generates), then feed that into mkcls-to-tsx.pl
+
+TODO: semi-lexicalisation would be much more useful. mkcls-to-tsx.pl is ready
+for semi-lexicalised input, I just haven't written the script to do that yet.
