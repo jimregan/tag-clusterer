@@ -23,9 +23,15 @@ while(<>) {
 	# Throw away any escaped slashes
 	s/\\\///;
 
+	# 
+	if (/\^\*/) {
+		print "UNK\n";
+		next;
+	}
+
 	# We only care about the analysis
 	my @parts = split/\//;
-	die "Untagged text, cannot continue" if ($#parts != 1);
+	die "Untagged text, cannot continue (text was: $_)" if ($#parts != 1);
 	$_ = $parts[1];
 
 	#And now we delexicalise (=throw anything that's not a tag)
