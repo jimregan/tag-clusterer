@@ -9,5 +9,45 @@ The input must be tagged -- not analysed -- text in the format used for
 supervised training of the tagger. Feed its output to mkcls (play around with
 the number of classes it generates), then feed that into mkcls-to-tsx.pl
 
-TODO: semi-lexicalisation would be much more useful. mkcls-to-tsx.pl is ready
-for semi-lexicalised input, I just haven't written the script to do that yet.
+semi-lexicalise.pl can take a set of tags to treat as stopwords, in the
+apertium-transfer-tools .atx format, and semi-lexicalise the input. In this
+case, the generated .tsx file will have closed classes, and may be usable
+without extra intervention.
+
+.atx looks like this:
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<transfer-at source="Portuguese" target="Spanish">
+<source>
+  <lexicalized-words>
+    <lexicalized-word tags="cnjsub"/>
+    <lexicalized-word tags="det.*"/>
+    <lexicalized-word tags="pr"/>
+    <lexicalized-word tags="prn.tn.*"/> 
+    <lexicalized-word tags="prn.enc.*"/>
+    <lexicalized-word tags="prn.pro.*"/>
+    <lexicalized-word tags="rel.*"/>
+    <lexicalized-word tags="vbser.*"/>
+    <lexicalized-word tags="vbhaver.*"/>
+    <lexicalized-word tags="vbmod.*"/> 
+    <lexicalized-word tags="vblex.*" lemma="há"/>  
+  </lexicalized-words>
+</source>
+<target>
+  <lexicalized-words>
+    <lexicalized-word tags="cnjsub"/>
+    <lexicalized-word tags="det.*"/>
+    <lexicalized-word tags="pr"/>
+    <lexicalized-word tags="prn.tn.*"/> 
+    <lexicalized-word tags="prn.enc.*"/>
+    <lexicalized-word tags="prn.pro.*"/>
+    <lexicalized-word tags="rel.*"/>
+    <lexicalized-word tags="vbser.*"/>
+    <lexicalized-word tags="vbhaver.*"/>
+    <lexicalized-word tags="vbmod.*"/>
+    <lexicalized-word tags="vblex.*" lemma="hacer"/>
+  </lexicalized-words>
+</target>
+</transfer-at>
+
+semi-lexicalise.pl only uses the <source> part, so you only need that.
