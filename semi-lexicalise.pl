@@ -69,6 +69,7 @@ while (<$input>) {
 				$each[0] =~ s/^([^<]*)/$1$tail/;
 			}
 			for my $e (@each) {
+				$e =~ s/ /_/g;
 				if ($e !~ /$re/) {
 					$e =~ s/^[^<]*</</;
 				}
@@ -77,6 +78,7 @@ while (<$input>) {
 			print join('+', @out) . "\n";
 		} else {
 			if (/$re/) {
+				s/ /_/g;
 				print "$_\n";
 			} else {
 				s/^[^<]*</</;
