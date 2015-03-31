@@ -2,6 +2,10 @@
 
 use warnings;
 use strict;
+use utf8;
+
+binmode STDIN, ":utf8";
+binmode STDOUT, ":utf8";
 
 my %single = ();
 my %mult = ();
@@ -59,7 +63,7 @@ for my $k (keys %single) {
 	for my $v (@{$single{$k}}) {
 		$tagsout .= "      <tags-item ";
 		if ($v =~ /^([^<]*)</ && $1 ne '') {
-			$lemtmp = $1;
+			$lemtmp = lc($1);
 			$lemtmp =~ s/_/ /g;
 			$tagsout .= "lemma=\"$lemtmp\" ";
 			$v =~ s/^([^<]*)</</;
@@ -97,7 +101,7 @@ for my $m (keys %mult) {
 			} else {
 				$tagsout .= "        <tags-item ";
 				if ($s =~ /^([^<]*)</ && $1 ne '') {
-					$lemtmp = $1;
+					$lemtmp = lc($1);
 					$lemtmp =~ s/_/ /g;
 					$tagsout .= "lemma=\"$lemtmp\" ";
 					$s =~ s/^([^<]*)</</;
